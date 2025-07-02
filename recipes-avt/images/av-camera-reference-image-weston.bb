@@ -13,7 +13,7 @@ CORE_IMAGE_BASE_INSTALL += "vimbax-examples vimbax-viewer vimbax-csitl vimbax-fi
 CORE_IMAGE_BASE_INSTALL += "vmbpy"
 CORE_IMAGE_BASE_INSTALL += "vmbc-examples"
 
-CORE_IMAGE_BASE_INSTALL:append:aarch64 = " avt-csi2 v4l-utils v4l2viewer "
+CORE_IMAGE_BASE_INSTALL:append:aarch64 = " avt-csi2 v4l-utils "
  
 QB_MEM = "-m 512"
 
