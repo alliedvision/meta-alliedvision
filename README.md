@@ -19,6 +19,9 @@ This layer depends on:
 URI: git://git.openembedded.org/openembedded-core 
 branch: scarthgap
 
+URI: git://git.openembedded.org/meta-openembedded
+branch: scarthgap
+
 To build the v4l2viewer qt5 or qt6 is required:
 
 URI: https://github.com/meta-qt5/meta-qt5.git
