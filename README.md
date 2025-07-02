@@ -11,7 +11,7 @@ Included components:
 | Recipe name | Description |
 --------------|-------------|
 | av-camera-reference-image-cmdline | Basic command line image with Allied Vision drivers and Vimba X installed | 
-| av-camera-reference-image-weston | Image with wayland gui. Everything from the command line image plus gui tools like the VimbaXViewer and V4L2Viewer | 
+| av-camera-reference-image-weston | Image with Wayland GUI. Everything from the command line image plus GUI tools like the VimbaXViewer and V4L2Viewer | 
 
 ## Dependencies
 This layer depends on:
@@ -22,7 +22,7 @@ branch: scarthgap
 URI: git://git.openembedded.org/meta-openembedded
 branch: scarthgap
 
-To build the v4l2viewer qt5 or qt6 is required:
+To build the V4L2Viewer qt5 or qt6 is required:
 
 URI: https://github.com/meta-qt5/meta-qt5.git
 branch: scarthgap
@@ -32,12 +32,12 @@ branch: 6.9.1
 
 ## Reporting issues
 
-Please use the github issues section of meta-alliedvision for reporting build or runtime issue. When reporting an issue please include following information about your environment:
+Please use the Github issues section of meta-alliedvision for reporting build or runtime issue. When reporting an issue please include following information about your environment:
 - Camera model and firmware version
 - Host hardware information (SoC, Carrier)
 
 
-Alternatively you can you write an email to the Allied Vision support: support@alliedvision.com
+Alternatively you can contact the [Allied Vision Support](https://www.alliedvision.com/en/about-us/contact-us/technical-support-repair-/-rma/).
 
 
 ## Contributing
