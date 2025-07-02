@@ -1,0 +1,175 @@
+----------------------------------------------------
+Terms and Conditions for Using Free Vimba X Software
+----------------------------------------------------
+
+Provided by Allied Vision Technologies GmbH
+
+Art. 1 Scope of Application
+---------------------------
+   1. These Terms and Conditions contain the terms and conditions for the provision 
+      and use (hereinafter referred to as “Terms and Conditions”) 
+      of “Vimba X“ software (hereinafter referred to as “Software”) that is provided 
+      free of charge.
+   2. Our offer regarding the provision of the Software is not directed to consumers; 
+      we do not grant any usage rights to consumers. A consumer 
+      is an individual that enters into a legal transaction for purposes that cannot 
+      be attributed to its commercial or self-employed activities.
+   3. The Terms and Conditions below only apply to business organizations, legal 
+      entities under public law, or separate funds under public law. 
+      By downloading the Software you confirm that you are one of the entities 
+      described in sentence 1 or represent one of these. A business person 
+      is an individual, a legal entity or partnership having legal capacity that 
+      enters into a legal transaction in order to carry out its 
+      commercial or self-employed activities.
+   4. When you wish to obtain a free Software version, you will enter into an 
+      agreement with Allied Vision Technologies GmbH, Taschenweg 2a, 
+      07646 Stadtroda, Germany, email: info@alliedvision.com.
+
+Art. 2 Software Description, Intended Use
+-----------------------------------------
+   1. “Vimba X” Software is a cross-platform software development kit (SDK) for 
+      compatible cameras. The Software shall be used to control the cameras 
+      offered by Allied Vision and software from Allied Vision as well as supported 
+      hardware and software of TKH Vision member brands (“intended use”). For a 
+      detailed description of the current Software, please go to 
+      https://www.alliedvision.com/en/products/software/vimba-x-sdk/. A detailed description 
+      of the Software version that you have installed is available 
+      in the Vimba X installation folder.
+   2. The description also contains the system requirements for the installation 
+      of the Software and compatibility data (operating conditions). 
+      For further application notes please visit our support section on 
+      https://www.alliedvision.com/en/support/faqs-application-notes/.
+   3. We offer you a free Software version for the intended use as defined in Art. 4 
+      of these Terms and Conditions.
+
+Art. 3 Provision of Software
+----------------------------
+   1. You will receive the Software in executable form (object code), consisting of a 
+      computer program and an electronic user documentation that 
+      is integrated into the program. The user documentation basically consists of 
+      electronic help files. In addition, we will provide you with a 
+      source code interface in the programming language C++, which also forms part of 
+      the Software.
+   2. The free Software version can be downloaded from our website 
+      https://www.alliedvision.com.
+   3. We are not obligated to provide any other services, such as training, 
+      instruction or consulting.
+
+Art. 4 Rights to Use
+--------------------
+   1. We reserve the copyright and any other industrial property rights in and 
+      to the Software. To the extent that the Software contains software 
+      portions created by third parties, we possess the prerequisite rights and 
+      title to grant you the rights described in these Terms and Conditions. 
+      To the extent that certain portions of the Software are open source 
+      products, we will comply with the terms and conditions stipulated in the 
+      corresponding open source license agreement (e.g., by providing you with 
+      the corresponding open source license agreements and, if applicable, 
+      with the source code of the open source software together with the Software).
+   2. We reserve any rights in and to the Software to the extent that they were 
+      not expressly granted to you under these Terms and Conditions.
+   3. We grant you a non-exclusive, indefinite and world-wide right to use the 
+      Software as intended under this Agreement.
+      a. We grant you the right to upload, display and run the Software on your 
+         hardware environment, to transfer it to other hardware and to store it.
+      b. We grant you the right to integrate the Software into our cameras or 
+         other devices/machines via the published interfaces, or to offer such 
+         integration services to your customers to allow you or your customers 
+         to use our cameras together with the connected devices/machines to the 
+         extent supported by the functionality of our Software.
+      c. We grant you the right to dispose of the Software together with the 
+         cameras or, as set forth in subsection b), with the connected devices/
+         machines or to sell the Software in this form to your customers after 
+         you have rendered integration services; you are authorized to grant 
+         your customers non-exclusive, world-wide and indefinite rights to use 
+         the Software – however only in connection with the use of our cameras 
+	 and software from Allied Vision as well as supported hardware and software 
+         of TKH Vision member brands. TKH member brands are listed at 
+         https://tkhvision.com/members/ – in accordance with Art. 4 par. 3 
+         subsections a), and c) through e) in conjunction with Art. 4 par. 4.
+      d. You may use the Software for the purposes indicated in subsections a) 
+         through c), and reproduce the Software for these purposes and for the 
+         purpose of making a backup copy and in order to back up data as 
+         customary. In addition, you have the right to reproduce and modify the 
+         Software in order to ensure the intended use of the Software, including 
+         error correction.
+      e. The person authorized to use the Software may monitor, examine or test 
+         the operation of this program without our prior consent in order to 
+         determine the concepts and principles underlying a certain program 
+         component, provided, however, that this occurs by means of permissible 
+         activities for the upload, display, running, transfer or storage of 
+         the program.
+
+   4. Unless you have obtained our prior written consent, you are not authorized to:
+      a. reproduce, to distribute, communicate to the public or make the Software 
+         available to the public beyond the permitted scope as set forth in Art. 
+         4 par. 3 of this Agreement,
+      b. to rent or loan the Software, to use it on behalf of or together with a 
+         third party or to facilitate any other third-party use, unless you are 
+         authorized to do so in accordance with Art. 4, par 3, subsection c),
+      c. to modify, rearrange, translate or decompile the Software, unless this 
+         act is permissible under Art. 4 par. 3. The statutory provisions on 
+         decompiling set forth in section 69e of the German Copyright Act 
+         (UrhG) remain unaffected.
+      d. to change, modify, alter or remove the copyright notices, other 
+         proprietary legends or notices, serial numbers, and any other features 
+         contained in the Software and serving the purpose of identification,
+      e. to use the Software with a camera or to integrate it into a camera 
+         that is not offered by TKH Vision or that you create yourself or have created,
+      f. to use the Software or portions thereof in order to create your own 
+         control software or to integrate the Software or portions thereof into 
+         your own control software.
+
+    Any use beyond the permissible use set forth in these Terms and Conditions 
+    constitutes a breach of this Agreement that entitles us to injunctive 
+    relief and damages.
+
+Art. 5 Defects as to Quality and Defects of Title, Liability
+
+   1. With regard to Software versions provided free of charge and in the event of 
+      defects as to quality and defects in title we will be liable for 
+      damages or reimbursement of wasted expenditures only to the extent set 
+      forth below. You are not entitled to subsequent improvement. However, 
+      in the event that you notify us of a defect in the Software, we have 
+      the right to correct the defect, although we are not obligated to do so. 
+      We have the right to restrict our support and assistance to the then 
+      current Software version.
+   2. With regard to free Software, we are liable for damages or reimbursement 
+      of wasted expenditures only in the event of intentional wrongdoing or 
+      gross negligence and in the event that we have maliciously concealed a 
+      defect in title or as to quality. The statutory liability based on death, 
+      physical injury or damage to health or the loss of freedom and claims 
+      under the Product Liability Act remains unaffected by the limitations set 
+      forth in sentence 1. If a damage incident is attributable to fault both 
+      on our and your part, you will be liable for comparative fault.
+   3. All claims to damages or reimbursement of wasted expenditures that are 
+      asserted against us under contractual or extra-contractual liability 
+      shall come under the statute of limitations within two (2) years. The 
+      statute of limitations period commences at the end of the year in which the 
+      claim arose and the obligee becomes aware of the circumstances resulting 
+      in the claim and of the identity of the obligor or could have become 
+      aware thereof, had there not been gross negligence. The claims will come 
+      under the statute of limitations no later than five (5) years after the 
+      date on which the claim arises. In the event of claims based on intentional 
+      wrongdoing, gross negligence, malice, personal injuries and under the 
+      Product Liability Act, the provisions of the statute of limitations 
+      shall apply.
+
+Art. 6 Place of Performance, Place of Jurisdiction, Choice of Law
+
+   1. Place of performance is our registered office.
+   2. Place of jurisdiction for all disputes arising out of or in connection 
+      with this Agreement is the registered office of our company, if the customer 
+      is a business person pursuant to the German Commercial Code or is treated 
+      as such.
+   3. This Agreement shall be exclusively governed by the law of the Federal 
+      Republic of Germany, with the exception of the UN Convention on the 
+      International Sale of Goods (CISG) and the conflict of law rules of 
+      the German law.
+
+Last revised: January 2025
+
+Allied Vision Technologies GmbH
+Taschenweg 2a
+07646 Stadtroda
+Germany
