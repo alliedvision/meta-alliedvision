@@ -16,4 +16,4 @@ S = "${WORKDIR}/git"
 PEP517_BUILD_OPTS = "--config-setting=--vmb-dir=${RECIPE_SYSROOT} --config-setting=--plat-name=${TARGET_ARCH}"
 EXCLUDE_FROM_SHLIBS = "1"
 
-RDEPENDS:${PN} = "glibc libgcc libstdc++"
+RDEPENDS:${PN} = "glibc libgcc libstdc++ python3-ctypes"
