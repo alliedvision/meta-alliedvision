@@ -13,7 +13,16 @@ inherit avt-git python_setuptools_build_meta
 
 S = "${WORKDIR}/git"
 
+do_install:append() {
+    install -d ${D}/opt/VmbPy_Examples
+
+    install -m 0644 ${S}/Examples/* ${D}/opt/VmbPy_Examples
+} 
+
 PEP517_BUILD_OPTS = "--config-setting=--vmb-dir=${RECIPE_SYSROOT} --config-setting=--plat-name=${TARGET_ARCH}"
 EXCLUDE_FROM_SHLIBS = "1"
 
+PACKAGES += "${PN}-examples"
+
+FILES:${PN}-examples = "/opt/VmbPy_Examples"
 RDEPENDS:${PN} = "glibc libgcc libstdc++ python3-ctypes"
