@@ -140,6 +140,9 @@ do_install () {
     install -m 0644 ${S}/cti/VimbaUSBTL.xml ${D}${vimbax_ctidir}
     printf "SUBSYSTEM==\"usb\", ACTION==\"add\", ATTRS{idVendor}==\"1ab2\", ATTRS{idProduct}==\"0001\", MODE=\"0666\"\nSUBSYSTEM==\"usb\", ACTION==\"add\", ATTRS{idVendor}==\"1ab2\", ATTRS{idProduct}==\"ff01\", MODE=\"0666\"\n" > ${D}${sysconfdir}/udev/rules.d/99-vimbax-usbtl.rules
 
+    install -m 0644 ${S}/cti/VimbaGigETL.cti ${D}${vimbax_ctidir}
+    install -m 0644 ${S}/cti/VimbaGigETL.xml ${D}${vimbax_ctidir}
+
     for lib in ${VIMBAX_GUI_LIBS}; do
         install -m 0644 ${S}/bin/${lib} ${D}${vimbax_bindir}/${lib}
     done
@@ -171,6 +174,7 @@ PACKAGES = " \
     ${PN}-tlpath \
     ${PN}-csitl \
     ${PN}-usbtl \
+    ${PN}-gigetl \
     ${PN}-firmwareupdater \
     ${PN}-examples \
     ${PN}-examples-dbg \
@@ -199,6 +203,9 @@ RDEPENDS:${PN}-csitl = "glibc libgcc libstdc++ ${PN}-tlpath"
 
 FILES:${PN}-usbtl = "${vimbax_ctidir}/VimbaUSBTL.cti ${vimbax_ctidir}/VimbaUSBTL.xml ${sysconfdir}/udev/rules.d/99-vimbax-usbtl.rules"
 RDEPENDS:${PN}-usbtl = "glibc libgcc libstdc++ ${PN}-tlpath"
+
+FILES:${PN}-gigetl = "${vimbax_ctidir}/VimbaGigETL.cti ${vimbax_ctidir}/VimbaGigETL.xml"
+RDEPENDS:${PN}-gigetl = "glibc libgcc libstdc++ ${PN}-tlpath"
 
 FILES:${PN}-gui-libs = "${@build_packages_path(d, '${vimbax_bindir}', 'VIMBAX_GUI_LIBS')} ${vimbax_bindir}/platforms"
 RDEPENDS:${PN}-gui-libs = " \
