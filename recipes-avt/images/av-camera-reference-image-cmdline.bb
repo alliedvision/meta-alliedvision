@@ -1,6 +1,6 @@
 SUMMARY = "Allied Vision Camera Reference Image"
 
-IMAGE_FEATURES += "splash package-management ssh-server-dropbear hwcodecs debug-tweaks"
+IMAGE_FEATURES += "splash package-management ssh-server-openssh hwcodecs debug-tweaks"
 
 LICENSE = "BSD-3-Clause"
 
