@@ -2,8 +2,8 @@
 
 Included components:
 - Vimba X 2025-1
-- Alvium CSI driver 1.2.0
-- V4L2Viewer 2.3.0
+- Alvium CSI driver 1.3.0
+- V4L2Viewer 2.4.0
 
 
 ## Images
@@ -32,7 +32,7 @@ branch: 6.9.1
 
 ## Reporting issues
 
-Please use the Github issues section of meta-alliedvision for reporting build or runtime issue. When reporting an issue please include following information about your environment:
+Please use the Github issues section of meta-alliedvision for reporting build or rungtime issue. When reporting an issue please include following information about your environment:
 - Camera model and firmware version
 - Host hardware information (SoC, Carrier)
 
