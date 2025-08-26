@@ -4,8 +4,8 @@ LIC_FILES_CHKSUM = "file://LICENSE.md;md5=435d4178fd08b25f9cf911f1c3a0ce1d"
 
 
 AVT_GIT_REPO = "V4L2Viewer"
-AVT_GIT_BRANCH = "main"
-SRCREV = "d765360fe0a30fb1d90c2dbe217ccbbe5f6aa34e"
+AVT_GIT_BRANCH = "dev"
+SRCREV = "c3b8566a84620b0424a039e88092c189ccf1afef"
 
 inherit avt-git
 
@@ -13,7 +13,7 @@ DEPENDS:append = " qtbase "
 
 S = "${WORKDIR}/git"
 
-PV = "2.3.0+git${SRCPV}"
+PV = "2.4.0+git${SRCPV}"
 
 do_install() {
 	install -d ${D}${bindir}
