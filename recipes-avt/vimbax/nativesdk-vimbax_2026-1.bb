@@ -1,4 +1,4 @@
-SUMMARY = "Vimba X 2025-1"
+SUMMARY = "Vimba X 2026-1"
 DESCRIPTION = "Allied Vision Vimba X SDK"
 LICENSE = "CLOSED"
 

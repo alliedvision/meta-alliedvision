@@ -1,7 +1,7 @@
-SUMMARY = "Vimba X 2025-1"
+SUMMARY = "Vimba X 2026-1"
 DESCRIPTION = "Allied Vision Vimba X SDK"
 LICENSE = "Proprietary"
-LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=98d248e64f43a63bafcd46b0c6606ba3"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=192ab6417d31c7a23d6f57815d13fde5"
 LICENSE_FLAGS = "commercial"
 
 python () {
@@ -14,12 +14,11 @@ SRC_URI = "\
     file://LICENSE.txt;subdir=${S} \
 "
 
-SRC_URI:append:aarch64 = "https://downloads.alliedvision.com/VimbaX/VimbaX_Setup-${PV}-Linux_ARM64.tar.gz;name=vimbax-aarch64"
-SRC_URI[vimbax-aarch64.sha256sum] = "aad2a34016d2279f907e58d5467990b8db55a9918116b70ba9468dd22d374b47"
+SRC_URI:append:aarch64 = "https://www.alliedvision.com/downloads/software/Vimba_X/VimbaX_Setup-2026-1-Linux_ARM64.tar.gz;name=vimbax-aarch64"
+SRC_URI[vimbax-aarch64.sha256sum] = "b8f08149ca77786a98dc412d3c1b588ea7849f5163cc85d622908dd3cb242860"
 
-SRC_URI:append:x86_64 = "https://downloads.alliedvision.com/VimbaX/VimbaX_Setup-${PV}-Linux64.tar.gz;name=vimbax-x86_64"
-# TODO: Adjust checksum
-SRC_URI[vimbax-x86_64.sha256sum] = "632482112f4a297ac58b8a048fbb11a336ecbef2ba251ef171c2fefa543e2154"
+SRC_URI:append:x86_64 = "https://www.alliedvision.com/downloads/software/Vimba_X/VimbaX_Setup-2026-1-Linux64.tar.gz;name=vimbax-x86_64"
+SRC_URI[vimbax-x86_64.sha256sum] = "74ca5b7dec96ae4845e54afc551cf2343f0beea6ac6d79811263da14781cc5c9"
 
 S = "${WORKDIR}/VimbaX_${PV}"
 
@@ -132,6 +131,8 @@ do_install () {
     install -m 0644 ${S}/api/lib/libVmbCPP.so ${D}/opt/VimbaX_${PV}/lib
 
     install -m 0644 ${S}/api/lib/libVmbImageTransform.so ${D}/opt/VimbaX_${PV}/lib
+    
+    install -m 0644 ${S}/api/lib/libVmbNUC.so ${D}/opt/VimbaX_${PV}/lib
 
     install -m 0644 ${S}/cti/VimbaCSITL.cti ${D}${vimbax_ctidir}
     install -m 0644 ${S}/cti/VimbaCSITL.xml ${D}${vimbax_ctidir}
@@ -171,6 +172,8 @@ PACKAGES = " \
     ${PN}-vmbcpp-dev \
     ${PN}-vmbimagetransform \
     ${PN}-vmbimagetransform-dev \
+    ${PN}-vmbnuc \
+    ${PN}-vmbnuc-dev \
     ${PN}-tlpath \
     ${PN}-csitl \
     ${PN}-usbtl \
@@ -195,6 +198,8 @@ FILES:${PN}-vmbcpp = "/opt/VimbaX_${PV}/lib/libVmbCPP.so"
 RDEPENDS:${PN}-vmbcpp = "${PN}-vmbc"
 
 FILES:${PN}-vmbimagetransform = "/opt/VimbaX_${PV}/lib/libVmbImageTransform.so"
+
+FILES:${PN}-vmbnuc = "/opt/VimbaX_${PV}/lib/libVmbNUC.so"
 
 FILES:${PN}-tlpath = "${sysconfdir}/profile.d/vimbax_tl.sh"
 
@@ -235,6 +240,12 @@ FILES:${PN}-vmbimagetransform-dev = " \
     ${vimbax_includedir}/VmbImageTransform \
     ${vimbax_libdir}/cmake/vmb/configs/vmb_imagetransform.cmake \
     ${vimbax_libdir}/cmake/vmb/configs/vmb_imagetransform-release.cmake \
+"
+
+FILES:${PN}-vmbnuc-dev = " \
+    ${vimbax_includedir}/VmbNUC \
+    ${vimbax_libdir}/cmake/VmbNUC/VmbNUCConfig.cmake \
+    ${vimbax_libdir}/cmake/VmbNUC/VmbNUCConfig-release.cmake \
 "
 
 SYSROOT_DIRS += "${vimbax_libdir} ${vimbax_includedir}"

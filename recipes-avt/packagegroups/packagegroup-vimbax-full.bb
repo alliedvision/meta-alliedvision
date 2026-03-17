@@ -2,7 +2,7 @@ DESCRIPTION = "Vimba X full installation"
 
 inherit packagegroup
 
-VMB_PACKAGES_API = "vimbax-vmbc vimbax-vmbcpp vmbpy vimbax-vmbimagetransform"
+VMB_PACKAGES_API = "vimbax-vmbc vimbax-vmbcpp vmbpy vimbax-vmbimagetransform vimbax-vmbnuc"
 
 VMB_PACKAGES_TRANSPORT_LAYERS = "vimbax-usbtl vimbax-gigetl"
 VMB_PACKAGES_TRANSPORT_LAYERS:append:aarch64 = " vimbax-csitl "
