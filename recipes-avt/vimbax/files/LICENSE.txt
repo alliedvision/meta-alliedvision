@@ -29,27 +29,28 @@ Art. 2 Software Description, Intended Use
 -----------------------------------------
    1. “Vimba X” Software is a cross-platform software development kit (SDK) for 
       compatible cameras. The Software shall be used to control the cameras 
-      offered by Allied Vision and software from Allied Vision as well as supported 
-      hardware and software of TKH Vision member brands (“intended use”). For a 
-      detailed description of the current Software, please go to 
-      https://www.alliedvision.com/en/products/software/vimba-x-sdk/. A detailed description 
-      of the Software version that you have installed is available 
-      in the Vimba X installation folder.
+      offered by Allied Vision and software from Allied Vision as well as explicitly 
+      supported hardware and software of Allied Vision and TKH Vision member brands 
+      (“intended use”). 
+      For a detailed description of the current Software, please go to 
+      https://www.alliedvision.com/en/support/software-downloads/vimba-x-sdk/vimba-x. 
+      A detailed description of the Software version that you have installed is 
+      available in the Vimba X installation folder.
    2. The description also contains the system requirements for the installation 
       of the Software and compatibility data (operating conditions). 
       For further application notes please visit our support section on 
-      https://www.alliedvision.com/en/support/faqs-application-notes/.
+      https://www.alliedvision.com/en/support/faqs-and-knowledge.
    3. We offer you a free Software version for the intended use as defined in Art. 4 
       of these Terms and Conditions.
 
 Art. 3 Provision of Software
 ----------------------------
-   1. You will receive the Software in executable form (object code), consisting of a 
-      computer program and an electronic user documentation that 
+   1. You will receive the Software in executable form (object code), consisting 
+      of a computer program and an electronic user documentation that 
       is integrated into the program. The user documentation basically consists of 
       electronic help files. In addition, we will provide you with a 
-      source code interface in the programming language C++, which also forms part of 
-      the Software.
+      source code interface in the programming language C++, which also forms 
+      part of the Software.
    2. The free Software version can be downloaded from our website 
       https://www.alliedvision.com.
    3. We are not obligated to provide any other services, such as training, 
@@ -83,10 +84,12 @@ Art. 4 Rights to Use
          you have rendered integration services; you are authorized to grant 
          your customers non-exclusive, world-wide and indefinite rights to use 
          the Software – however only in connection with the use of our cameras 
-	 and software from Allied Vision as well as supported hardware and software 
-         of TKH Vision member brands. TKH member brands are listed at 
-         https://tkhvision.com/members/ – in accordance with Art. 4 par. 3 
-         subsections a), and c) through e) in conjunction with Art. 4 par. 4.
+	 and software from Allied Vision as well as explicitly supported 
+         hardware and software of Allied Vision and TKH Vision member brands. 
+         The member brands are listed at 
+         https://tkhvision.com/members/ and at https://www.alliedvision.com/ – 
+         in accordance with Art. 4 par. 3 subsections a), and c) through e) 
+         in conjunction with Art. 4 par. 4.
       d. You may use the Software for the purposes indicated in subsections a) 
          through c), and reproduce the Software for these purposes and for the 
          purpose of making a backup copy and in order to back up data as 
@@ -115,7 +118,8 @@ Art. 4 Rights to Use
          proprietary legends or notices, serial numbers, and any other features 
          contained in the Software and serving the purpose of identification,
       e. to use the Software with a camera or to integrate it into a camera 
-         that is not offered by TKH Vision or that you create yourself or have created,
+         that is not offered by Allied Vision or TKH Vision or that you 
+         create yourself or have created,
       f. to use the Software or portions thereof in order to create your own 
          control software or to integrate the Software or portions thereof into 
          your own control software.
@@ -167,7 +171,7 @@ Art. 6 Place of Performance, Place of Jurisdiction, Choice of Law
       International Sale of Goods (CISG) and the conflict of law rules of 
       the German law.
 
-Last revised: January 2025
+Last revised: January 2026
 
 Allied Vision Technologies GmbH
 Taschenweg 2a

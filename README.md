@@ -1,8 +1,8 @@
 # OpenEmbedded/Yocto layer for Allied Vision cameras
 
 Included components:
-- Vimba X 2025-1
-- Alvium CSI driver 1.3.0
+- Vimba X 2026-1
+- Alvium CSI driver 1.4.0
 - V4L2Viewer 2.4.0
 
 

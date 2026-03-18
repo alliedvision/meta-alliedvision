@@ -7,7 +7,7 @@ DEPENDS = "vimbax"
 
 AVT_GIT_REPO = "VmbPy"
 AVT_GIT_BRANCH = "main"
-SRCREV = "a972270be6104e8ab54dea3d3d06195aa97e7864"
+SRCREV = "076e4a6dcf642c0044a054d542327ab430008d4e"
 
 inherit avt-git python_setuptools_build_meta
 
