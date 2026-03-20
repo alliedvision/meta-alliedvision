@@ -1,7 +1,7 @@
 SUMMARY = "VmbPy"
 DESCRIPTION = "Allied Vision Vimba X Python API"
 LICENSE = "BSD-2-Clause"
-LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=b5d103fb2e49695c98b4c7522e4e9d87"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;beginline=6;md5=ad0b8da7ca2e1efea9d4e3f0f54d0f81"
 
 DEPENDS = "vimbax"
 
