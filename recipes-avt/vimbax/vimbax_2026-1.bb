@@ -128,11 +128,11 @@ do_install () {
 
     echo ${vimbax_libdir} > ${D}${sysconfdir}/ld.so.conf.d/vimbax.conf
 
-    install -m 0644 ${S}/api/lib/libVmbCPP.so ${D}/opt/VimbaX_${PV}/lib
+    install -m 0644 ${S}/api/lib/libVmbCPP.so ${D}${vimbax_libdir}
 
-    install -m 0644 ${S}/api/lib/libVmbImageTransform.so ${D}/opt/VimbaX_${PV}/lib
+    install -m 0644 ${S}/api/lib/libVmbImageTransform.so ${D}${vimbax_libdir}
     
-    install -m 0644 ${S}/api/lib/libVmbNUC.so ${D}/opt/VimbaX_${PV}/lib
+    install -m 0644 ${S}/api/lib/libVmbNUC.so ${D}${vimbax_libdir}
 
     install -m 0644 ${S}/cti/VimbaCSITL.cti ${D}${vimbax_ctidir}
     install -m 0644 ${S}/cti/VimbaCSITL.xml ${D}${vimbax_ctidir}
@@ -192,14 +192,14 @@ RDEPENDS:${PN}-examples = "${PN}-vmbc ${PN}-vmbcpp ${PN}-vmbimagetransform"
 FILES:${PN}-firmwareupdater = "${@build_packages_path(d, '${vimbax_bindir}', 'VIMBAX_FIRMWARE_UPDATER')}"
 RDEPENDS:${PN}-firmwareupdater = "${PN}-vmbc ${@bb.utils.contains_any('DISTRO_FEATURES', 'x11 wayland', '${PN}-gui-libs', '', d)}"
 
-FILES:${PN}-vmbc = "/opt/VimbaX_${PV}/lib/GenICam /opt/VimbaX_${PV}/lib/libVmbC.so /opt/VimbaX_${PV}/lib/VmbC.xml /etc/ld.so.conf.d/vimbax.conf"
+FILES:${PN}-vmbc = "${vimbax_libdir}/GenICam ${vimbax_libdir}/libVmbC.so ${vimbax_libdir}/VmbC.xml /etc/ld.so.conf.d/vimbax.conf"
 
-FILES:${PN}-vmbcpp = "/opt/VimbaX_${PV}/lib/libVmbCPP.so"
+FILES:${PN}-vmbcpp = "${vimbax_libdir}/libVmbCPP.so"
 RDEPENDS:${PN}-vmbcpp = "${PN}-vmbc"
 
-FILES:${PN}-vmbimagetransform = "/opt/VimbaX_${PV}/lib/libVmbImageTransform.so"
+FILES:${PN}-vmbimagetransform = "${vimbax_libdir}/libVmbImageTransform.so"
 
-FILES:${PN}-vmbnuc = "/opt/VimbaX_${PV}/lib/libVmbNUC.so"
+FILES:${PN}-vmbnuc = "${vimbax_libdir}/libVmbNUC.so"
 
 FILES:${PN}-tlpath = "${sysconfdir}/profile.d/vimbax_tl.sh"
 
