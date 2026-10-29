@@ -20,7 +20,7 @@ SRC_URI[vimbax-aarch64.sha256sum] = "b8f08149ca77786a98dc412d3c1b588ea7849f5163c
 SRC_URI:append:x86_64 = "https://www.alliedvision.com/downloads/software/Vimba_X/VimbaX_Setup-2026-1-Linux64.tar.gz;name=vimbax-x86_64"
 SRC_URI[vimbax-x86_64.sha256sum] = "74ca5b7dec96ae4845e54afc551cf2343f0beea6ac6d79811263da14781cc5c9"
 
-S = "${WORKDIR}/VimbaX_${PV}"
+S = "${UNPACKDIR}/VimbaX_${PV}"
 
 vimbax_bindir = "/opt/VimbaX_${PV}/bin"
 vimbax_libdir = "/opt/VimbaX_${PV}/lib"

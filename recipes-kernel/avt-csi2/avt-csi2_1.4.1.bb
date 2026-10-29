@@ -8,9 +8,7 @@ SRCREV = "968189e8468907877f0de2270737ed5d04df4adc"
 
 inherit avt-git module
 
-S = "${WORKDIR}/git"
-
-PV = "1.4.1+git${SRCPV}"
+PV = "1.4.1+git"
 
 RPROVIDES:${PN} += "kernel-module-avt-csi2"
 

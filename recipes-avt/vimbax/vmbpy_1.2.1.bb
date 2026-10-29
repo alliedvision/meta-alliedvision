@@ -11,8 +11,6 @@ SRCREV = "076e4a6dcf642c0044a054d542327ab430008d4e"
 
 inherit avt-git python_setuptools_build_meta
 
-S = "${WORKDIR}/git"
-
 do_install:append() {
     install -d ${D}/opt/VmbPy_Examples
 

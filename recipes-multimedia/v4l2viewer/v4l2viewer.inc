@@ -11,9 +11,7 @@ inherit avt-git
 
 DEPENDS:append = " qtbase "
 
-S = "${WORKDIR}/git"
-
-PV = "2.4.0+git${SRCPV}"
+PV = "2.4.0+git"
 
 do_install() {
 	install -d ${D}${bindir}
