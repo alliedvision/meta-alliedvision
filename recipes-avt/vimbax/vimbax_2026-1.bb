@@ -96,9 +96,11 @@ VIMBAX_FIRMWARE_UPDATER = " \
 
 do_install () {
     install -d ${D}${vimbax_bindir}
-    install -d ${D}${vimbax_bindir}/wayland-decoration-client
-    install -d ${D}${vimbax_bindir}/wayland-graphics-integration-client
-    install -d ${D}${vimbax_bindir}/wayland-shell-integration
+    if ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'true', 'false', d)}; then
+        install -d ${D}${vimbax_bindir}/wayland-decoration-client
+        install -d ${D}${vimbax_bindir}/wayland-graphics-integration-client
+        install -d ${D}${vimbax_bindir}/wayland-shell-integration
+    fi
     install -d ${D}${vimbax_bindir}/platforms
     install -d ${D}${vimbax_bindir}/plugins
     install -d ${D}${vimbax_libdir}
