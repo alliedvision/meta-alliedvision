@@ -96,13 +96,6 @@ VIMBAX_FIRMWARE_UPDATER = " \
 
 do_install () {
     install -d ${D}${vimbax_bindir}
-    if ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'true', 'false', d)}; then
-        install -d ${D}${vimbax_bindir}/wayland-decoration-client
-        install -d ${D}${vimbax_bindir}/wayland-graphics-integration-client
-        install -d ${D}${vimbax_bindir}/wayland-shell-integration
-    fi
-    install -d ${D}${vimbax_bindir}/platforms
-    install -d ${D}${vimbax_bindir}/plugins
     install -d ${D}${vimbax_libdir}
     install -d ${D}${vimbax_libdir}/GenICam
     install -d ${D}${vimbax_ctidir}
@@ -146,13 +139,28 @@ do_install () {
     install -m 0644 ${S}/cti/VimbaGigETL.cti ${D}${vimbax_ctidir}
     install -m 0644 ${S}/cti/VimbaGigETL.xml ${D}${vimbax_ctidir}
 
-    for lib in ${VIMBAX_GUI_LIBS}; do
-        install -m 0644 ${S}/bin/${lib} ${D}${vimbax_bindir}/${lib}
-    done
-    install -m 0644 ${S}/bin/platforms/* ${D}${vimbax_bindir}/platforms
+    # The Qt GUI (gui-libs, viewer) only has Wayland and XCB platform
+    # plugins, so it is of no use without one of those features.
+    if ${@bb.utils.contains_any('DISTRO_FEATURES', 'x11 wayland', 'true', 'false', d)}; then
+        install -d ${D}${vimbax_bindir}/platforms
+        install -d ${D}${vimbax_bindir}/plugins
+        if ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'true', 'false', d)}; then
+            install -d ${D}${vimbax_bindir}/wayland-decoration-client
+            install -d ${D}${vimbax_bindir}/wayland-graphics-integration-client
+            install -d ${D}${vimbax_bindir}/wayland-shell-integration
+            install -m 0644 ${S}/bin/platforms/libqwayland-*.so ${D}${vimbax_bindir}/platforms
+        fi
+        if ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'true', 'false', d)}; then
+            install -m 0644 ${S}/bin/platforms/libqxcb.so ${D}${vimbax_bindir}/platforms
+        fi
 
-    install -m 0755 ${S}/bin/VimbaXViewer ${D}${vimbax_bindir}/VimbaXViewer 
-    install -m 0644 ${S}/bin/plugins/* ${D}${vimbax_bindir}/plugins
+        for lib in ${VIMBAX_GUI_LIBS}; do
+            install -m 0644 ${S}/bin/${lib} ${D}${vimbax_bindir}/${lib}
+        done
+
+        install -m 0755 ${S}/bin/VimbaXViewer ${D}${vimbax_bindir}/VimbaXViewer
+        install -m 0644 ${S}/bin/plugins/* ${D}${vimbax_bindir}/plugins
+    fi
 
     cp -r ${S}/api/include/* ${D}/${vimbax_includedir}
     cp -r ${S}/api/lib/cmake/* ${D}/${vimbax_libdir}/cmake
