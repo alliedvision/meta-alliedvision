@@ -20,7 +20,7 @@ SRC_URI[vimbax-aarch64.sha256sum] = "b8f08149ca77786a98dc412d3c1b588ea7849f5163c
 SRC_URI:append:x86_64 = "https://www.alliedvision.com/downloads/software/Vimba_X/VimbaX_Setup-2026-1-Linux64.tar.gz;name=vimbax-x86_64"
 SRC_URI[vimbax-x86_64.sha256sum] = "74ca5b7dec96ae4845e54afc551cf2343f0beea6ac6d79811263da14781cc5c9"
 
-S = "${WORKDIR}/VimbaX_${PV}"
+S = "${UNPACKDIR}/VimbaX_${PV}"
 
 vimbax_bindir = "/opt/VimbaX_${PV}/bin"
 vimbax_libdir = "/opt/VimbaX_${PV}/lib"
@@ -96,11 +96,6 @@ VIMBAX_FIRMWARE_UPDATER = " \
 
 do_install () {
     install -d ${D}${vimbax_bindir}
-    install -d ${D}${vimbax_bindir}/wayland-decoration-client
-    install -d ${D}${vimbax_bindir}/wayland-graphics-integration-client
-    install -d ${D}${vimbax_bindir}/wayland-shell-integration
-    install -d ${D}${vimbax_bindir}/platforms
-    install -d ${D}${vimbax_bindir}/plugins
     install -d ${D}${vimbax_libdir}
     install -d ${D}${vimbax_libdir}/GenICam
     install -d ${D}${vimbax_ctidir}
@@ -144,13 +139,28 @@ do_install () {
     install -m 0644 ${S}/cti/VimbaGigETL.cti ${D}${vimbax_ctidir}
     install -m 0644 ${S}/cti/VimbaGigETL.xml ${D}${vimbax_ctidir}
 
-    for lib in ${VIMBAX_GUI_LIBS}; do
-        install -m 0644 ${S}/bin/${lib} ${D}${vimbax_bindir}/${lib}
-    done
-    install -m 0644 ${S}/bin/platforms/* ${D}${vimbax_bindir}/platforms
+    # The Qt GUI (gui-libs, viewer) only has Wayland and XCB platform
+    # plugins, so it is of no use without one of those features.
+    if ${@bb.utils.contains_any('DISTRO_FEATURES', 'x11 wayland', 'true', 'false', d)}; then
+        install -d ${D}${vimbax_bindir}/platforms
+        install -d ${D}${vimbax_bindir}/plugins
+        if ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'true', 'false', d)}; then
+            install -d ${D}${vimbax_bindir}/wayland-decoration-client
+            install -d ${D}${vimbax_bindir}/wayland-graphics-integration-client
+            install -d ${D}${vimbax_bindir}/wayland-shell-integration
+            install -m 0644 ${S}/bin/platforms/libqwayland-*.so ${D}${vimbax_bindir}/platforms
+        fi
+        if ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'true', 'false', d)}; then
+            install -m 0644 ${S}/bin/platforms/libqxcb.so ${D}${vimbax_bindir}/platforms
+        fi
 
-    install -m 0755 ${S}/bin/VimbaXViewer ${D}${vimbax_bindir}/VimbaXViewer 
-    install -m 0644 ${S}/bin/plugins/* ${D}${vimbax_bindir}/plugins
+        for lib in ${VIMBAX_GUI_LIBS}; do
+            install -m 0644 ${S}/bin/${lib} ${D}${vimbax_bindir}/${lib}
+        done
+
+        install -m 0755 ${S}/bin/VimbaXViewer ${D}${vimbax_bindir}/VimbaXViewer
+        install -m 0644 ${S}/bin/plugins/* ${D}${vimbax_bindir}/plugins
+    fi
 
     cp -r ${S}/api/include/* ${D}/${vimbax_includedir}
     cp -r ${S}/api/lib/cmake/* ${D}/${vimbax_libdir}/cmake

@@ -2,7 +2,7 @@ SUMMARY = "Vimba X 2026-1"
 DESCRIPTION = "Allied Vision Vimba X SDK"
 LICENSE = "CLOSED"
 
-S = "${WORKDIR}"
+S = "${UNPACKDIR}"
 
 inherit nativesdk
 
